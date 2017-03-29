@@ -10,8 +10,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import reducers from 'reducers';
 
-import App from './App';
-import './index.css';
+import {App} from 'containers';
+import 'styles/index.css';
 
 const history = createHistory()
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -23,6 +23,11 @@ const store = createStore(
   )
 )
 /* eslint-enable */
+
+// const token = cookie.getToken();
+// if (token.length > 0) {
+//   store.dispatch(verifyToken(token));
+// }
 
 const muiTheme = getMuiTheme({
   background: '#0097a9',
