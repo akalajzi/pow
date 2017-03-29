@@ -10,7 +10,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import reducers from 'reducers';
 
-import {App} from 'containers';
+import {Router} from 'containers';
 import 'styles/index.css';
 
 const history = createHistory()
@@ -39,7 +39,7 @@ ReactDOM.render(
   <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <App />
+        <Router />
       </ConnectedRouter>
     </Provider>
   </MuiThemeProvider>,
