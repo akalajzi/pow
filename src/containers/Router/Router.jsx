@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import {
   App,
   Blank,
+  Header,
 } from 'containers'
 import { Loader } from 'components'
 
@@ -56,7 +57,7 @@ class Router extends Component {
         : <div>
         {
           !user.auth.isAuthenticated &&
-          <Route component={ Login } />
+          <Route component={ Blank } />
         }
         {
           user.auth.isAuthenticated &&
@@ -64,8 +65,8 @@ class Router extends Component {
             <Route component={ Header } />
             <Switch>
               <Route exact path='/' component={ App } />
-              <Route path='/login' component={ Login } />
-              <Route path='/activity' component={ Activity } />
+              <Route path='/login' component={ Blank } />
+              <Route path='/activity' component={ Blank } />
               <AdminRoute path='/admin' component={Blank} />
               { /* to be implemented */ }
               <Route path='/profile' component={Blank} />
